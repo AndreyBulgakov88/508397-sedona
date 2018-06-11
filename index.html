@@ -21,7 +21,7 @@
     <main class="container">
       <section class="main-header">
         <h1 class="visually-hidden">Отдых в городке "Седона"</h1>
-        <img class="main-photo" src="img/background-index.jpg" width="1200" height="773" alt="Окрестности Седоны">
+        <!--<img class="main-photo" src="img/background-index.jpg" width="1200" height="773" alt="Окрестности Седоны">-->
         <img class="main-header-text-primary" src="img/background-index-text.png" width="458" height="352" 
              alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
         <p class="main-header-text-additional">Седона - небольшой городок в Аризоне,
@@ -79,9 +79,8 @@
         <p class="search-text1">Заинтересовались?</p>
         <p class="search-text2">Укажите предполагаемые даты поездки, и мы покажем
                                       вам лучшие предложения гостиниц в Седоне</p>
-        <img class="search-map" src="img/map.jpg" width="1280" height="747" alt="Карта поиска гостиницы">
-        <form class="modal search-form" action="https://echo.htmlacademy.ru" method="post">
-          <h3>Поиск гостиницы в Седоне</h3>
+          <button class="search-open-button" type="button">Поиск гостиницы в Седоне</button>
+          <form class="modal search-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="search-item">
             <label for="arrival-date">Дата заезда</label>
             <input type="text" name="arrival-date" id="arrival-date" value="24 апреля 2017">
@@ -104,16 +103,17 @@
               <button class="button-children-count-add" type="button">+</button>
             </span>  
           </p>
-          <button class="search-button" type="submit">Найти</button>
+          <button class="search-send-button" type="submit">Найти</button>
         </form>
+        <img class="search-map" src="img/map.jpg" width="1280" height="747" alt="Карта поиска гостиницы">
       </section>
     </main>
     <footer class="page-footer">
       <p class="page-footer-hashtag"><b>#VISITSEDONA</b></p>
       <ul class="page-footer-social">
-        <li><a class="social-button" href="#">Twitter</a></li>
-        <li><a class="social-button" href="#">Facebook</a></li>
-        <li><a class="social-button" href="#">Youtube</a></li>
+        <li><a class="social-link" href="#">Twitter</a></li>
+        <li><a class="social-link" href="#">Facebook</a></li>
+        <li><a class="social-link" href="#">Youtube</a></li>
       </ul>
       <div class="page-footer-copyright">
         <p>Website by</p>

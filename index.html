@@ -75,15 +75,37 @@
         </ul>
       </section>
       <section class="hotel-search">
-        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-        <p class="hotel-search-text1">Заинтересовались?</p>
-        <p class="hotel-search-text2">Укажите предполагаемые даты поездки, и мы покажем
+        <h2 class="visually-hidden">Раздел поиска гостиницы</h2>
+        <p class="search-text1">Заинтересовались?</p>
+        <p class="search-text2">Укажите предполагаемые даты поездки, и мы покажем
                                       вам лучшие предложения гостиниц в Седоне</p>
-        <img class="hotel-search-map" src="img/map.jpg" width="1280" height="747" alt="Карта поиска гостиницы">
-        <div class="modal hotel-search-form">
+        <img class="search-map" src="img/map.jpg" width="1280" height="747" alt="Карта поиска гостиницы">
+        <form class="modal search-form" action="https://echo.htmlacademy.ru" method="post">
           <h3>Поиск гостиницы в Седоне</h3>
-          <!--Форма -->
-        </div>
+          <p class="search-item">
+            <label for="arrival-date">Дата заезда</label>
+            <input type="text" name="arrival-date" id="arrival-date" value="24 апреля 2017">
+          </p>
+          <p class="search-item">
+            <label for="departure-date">Дата выезда</label>
+            <input type="text" name="departure-date" id="departure-date" value="4 июля 2017">
+          </p>
+          <p class="search-item">
+            <span>
+              <label for="adults-count">Взрослые:</label>
+              <button class="button-adults-count-substract" type="button">-</button>
+              <input type="text" name="adults-count" id="adults-count" value="2">
+              <button class="button-adults-count-add" type="button">+</button>
+            </span>  
+            <span>
+              <label for="children-count">Дети</label>
+              <button class="button-children-count-substract" type="button">-</button>
+              <input type="text" name="children-count" id="children-count" value="0">
+              <button class="button-children-count-add" type="button">+</button>
+            </span>  
+          </p>
+          <button class="search-button" type="submit">Найти</button>
+        </form>
       </section>
     </main>
     <footer class="page-footer">

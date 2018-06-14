@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  
+  background: url(../img/background-index.jpg) no-repeat top center, 
+              url(../img/background-index-bottom.png) no-repeat center center;
+  background-color: #ffffff, #ffffff;
+}
+
+.catalog-page {
+  background: url(../img/background-catalog.jpg) no-repeat top center;
+}

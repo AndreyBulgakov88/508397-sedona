@@ -1,3 +1,5 @@
+/*Основная страница и стили, общие для всех страниц*/
+
 body {
   margin: 0;
   padding: 0;
@@ -12,10 +14,6 @@ body {
   background: url(../img/background-index.jpg) no-repeat top center, 
               url(../img/background-index-bottom.png) no-repeat center center;
   background-color: #f1f1f1;
-}
-
-.catalog-page {
-  background: url(../img/background-catalog.jpg) no-repeat top center;
 }
 
 a {
@@ -45,6 +43,7 @@ a {
 .nav-menu a:active {
   color: rgba(0,0,0,0.3);
 }
+
 
 .main-header-text-additional {
   font-size: 21px;
@@ -196,4 +195,36 @@ a {
 .social-link {
   font-weight: 700;
   color: #000000;
+}
+
+
+/*Страница каталога*/
+
+.catalog-page {
+  background: url(../img/background-catalog.jpg) no-repeat;
+}
+
+.nav-menu-current a {
+  color: #766357;
+}
+
+.filter-form {
+  color: #ffffff;
+}
+
+.filter-form legend{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ilter-option {
+  font-size: 14px;
+}
+
+.filter-form ul {
+  list-style: none;
+}
+
+.search-button {
+  background-color: rgba(0,0,0,0);
 }

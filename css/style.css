@@ -202,6 +202,7 @@ a {
 
 .catalog-page {
   background: url(../img/background-catalog.jpg) no-repeat;
+  background-color: #f1f1f1;
 }
 
 .nav-menu-current a {
@@ -217,14 +218,110 @@ a {
   font-weight: bold;
 }
 
-.ilter-option {
-  font-size: 14px;
-}
-
 .filter-form ul {
   list-style: none;
 }
 
 .search-button {
+  font-weight: 400;
+  color: #ffffff;
   background-color: rgba(0,0,0,0);
+}
+
+.search-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.search-result {
+  background-color: #fefefe;
+}
+
+.result-header-count {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.result-header-sort {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-list a {
+  color: rgba(0,0,0,0.3); 
+} 
+
+.sort-list-current a {
+  color: #81b3d2;
+}
+
+.sort-list a:hover {
+  color: #81b3d2; 
+} 
+
+.sort-list a:active {
+  color: #000000; 
+} 
+
+.sort-order a {
+  color: #000000;
+}
+
+.result-list {
+  list-style: none;
+}
+
+.result-item-name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.result-item-name:hover {
+  color: #81b3d2;
+}
+
+.result-item-name:active {
+  color: rgba(0,0,0,0.3);
+}
+
+.result-details {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.result-details:hover {
+  background-color: #669dc0;
+}
+
+.result-details:active {
+  color: rgba(255,255,255,0.3);
+  background-color: #5495bd;
+}
+
+.result-booking {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #756357;
+}
+
+.result-booking:hover {
+  background-color: #604e43;
+}
+
+.result-booking:active {
+  color: rgba(255,255,255,0.3);
+  background-color: #503d32;
+}
+
+.result-item-rating p {
+  color: #666666;
+  background-color: #f1f1f1;
 }

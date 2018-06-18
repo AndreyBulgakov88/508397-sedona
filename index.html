@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="page-header-nav">
         <a class="page-header-logo">
           <img src="img/logo.png" width="138" height="70" alt="Логотип «Седона»">
@@ -24,23 +24,25 @@
     <main class="container">
       <section class="main-header">
         <h1 class="visually-hidden">Отдых в городке "Седона"</h1>
-        <!--<img class="main-photo" src="img/background-index.jpg" width="1200" height="773" alt="Окрестности Седоны">-->
-        <img class="main-header-text-primary" src="img/background-index-text.png" width="458" height="352" 
-             alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
-        <p class="main-header-text-additional">Седона - небольшой городок в Аризоне,
-                                               заслуживающий большего!</p>
+        <div class="main-header-background">
+          <img class="main-header-text-primary" src="img/background-index-text.png" width="458" height="352" 
+               alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+        </div>
+        <p class="main-header-text-additional">Седона - небольшой городок в Аризоне,                                          <br>заслуживающий большего!</p>
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества отдыха в Седоне</h2>
         <p class="advantages-header-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <ul class="advantages-list">
           <li class="advantage-life">
-            <div class="advantage-life-text">
-              <h3>Настоящий городок</h3>           
-              <p>– №1 –</p>
-              <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>           
+            <div class="advantage-text-and-photo">
+              <div class="advantage-item">
+                <h3>Настоящий городок</h3>           
+                <p>– №1 –</p>
+                <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>         
+              </div>
+              <img class="advantage-photo" src="img/advantage-life.jpg" width="800" height="400" alt="Городок Седона">
             </div>
-            <img class="advantage-life-photo" src="img/advantage-life.jpg" width="800" height="400" alt="Городок Седона">
             <ul class="advantage-life-details-list">
               <li class="details-residence">
                 <h4>Жильё</h4>
@@ -57,25 +59,27 @@
             </ul>  
           </li>
           <li class="advantage-bridge">
-            <div class="advantage-bridge-text">
-              <h3>Там есть мост дьявола</h3>
-              <p>– №2 –</p>
-              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>  
+            <div class="advantage-text-and-photo">
+              <img class="advantage-photo" src="img/advantage-bridge.jpg" width="800" height="400" alt="Мост дьявола">  
+              <div class="advantage-item">
+                <h3>Там есть мост дьявола</h3>
+                <p>– №2 –</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>  
+              </div>            
             </div>
-            <img class="advantage-bridge-photo" src="img/advantage-bridge.jpg" width="800" height="400" alt="Мост дьявола">  
           </li>
           <div class="advantage-items">
-            <li class="advantage-item">
+            <li class="advantage-item advantage-item-other">
               <h3>Небольшая площадь</h3>
               <p>– №3 –</p>
               <p>Все достопримечательности находятся очень близко</p>            
             </li>
-            <li class="advantage-item">
+            <li class="advantage-item advantage-item-other">
               <h3>Красивая дорога</h3>
               <p>– №4 –</p>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>            
             </li>
-            <li class="advantage-item">
+            <li class="advantage-item advantage-item-other">
               <h3>Мало туристов</h3>
               <p>– №5 –</p>
               <p>Большинство едет в Гранд Каньон и толпится там</p>            
@@ -87,28 +91,28 @@
         <div class="hotel-search-header">
            <h2 class="visually-hidden">Раздел поиска гостиницы</h2>
           <p class="search-text1">Заинтересовались?</p>
-          <p class="search-text2">Укажите предполагаемые даты поездки, и мы покажем
+          <p class="search-text2">Укажите предполагаемые даты поездки,<br> и мы покажем
                                         вам лучшие предложения гостиниц в Седоне</p>
           <button class="button search-open-button" type="button">Поиск гостиницы в Седоне</button>
         </div>  
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="search-item">
-            <label for="arrival-date">Дата заезда</label>
+            <label for="arrival-date">Дата заезда:</label>
             <input type="text" name="arrival-date" id="arrival-date" value="24 апреля 2017">
           </p>
           <p class="search-item">
-            <label for="departure-date">Дата выезда</label>
+            <label for="departure-date">Дата выезда:</label>
             <input type="text" name="departure-date" id="departure-date" value="4 июля 2017">
           </p>
           <p class="search-item">
-            <span>
+            <span class="search-item-count">
               <label for="adults-count">Взрослые:</label>
               <button class="button button-count button-adults-substract" type="button">-</button>
               <input type="text" name="adults-count" id="adults-count" value="2">
               <button class="button button-count button-adults-add" type="button">+</button>
             </span>  
-            <span>
-              <label for="children-count">Дети</label>
+            <span class="search-item-count">
+              <label for="children-count">Дети:</label>
               <button class="button button-count button-children-substract" type="button">-</button>
               <input type="text" name="children-count" id="children-count" value="0">
               <button class="button button-count button-children-add" type="button">+</button>
@@ -119,7 +123,7 @@
         <img class="search-map" src="img/map.jpg" width="1280" height="747" alt="Карта поиска гостиницы">
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <p class="page-footer-hashtag">#VISITSEDONA</p>
       <ul class="page-footer-social">
         <li><a class="social-link" href="#">Twitter</a></li>

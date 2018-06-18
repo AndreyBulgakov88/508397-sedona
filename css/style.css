@@ -1,4 +1,8 @@
 /*Основная страница и стили, общие для всех страниц*/
+html,
+body {
+  min-width: 1280px;
+}
 
 body {
   margin: 0;
@@ -13,12 +17,17 @@ body {
   background-color: #f1f1f1;
 }
 
-.main-header {
-  background: url(../img/background-index.jpg) no-repeat top center, 
-              url(../img/background-index-bottom.png) no-repeat center center;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .container {
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
 }
 
@@ -30,12 +39,26 @@ a {
   font-weight: 700;
   line-height: 26px;
   color: #000000;
-
   background-color: #ffffff;
 }
 
 .nav-menu {
+  display: flex;
+  padding: 18px 72px;
   list-style: none;
+  margin: 0;
+}
+
+.nav-menu li:nth-child(1) {
+  margin-right: 147px;
+}
+
+.nav-menu li:nth-child(2) {
+  margin-right: 388px;
+}
+
+.nav-menu li:nth-child(3) {
+  margin-right: 162px;
 }
 
 .nav-menu a {
@@ -50,18 +73,44 @@ a {
   color: rgba(0,0,0,0.3);
 }
 
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header-background {
+  display: flex;
+  flex-direction: column;
+   background: url(../img/background-index.jpg) no-repeat 50% 21%, url(../img/background-index-bottom.png) no-repeat center center;
+  width: 1200px;
+  height: 508px;
+}
+ 
+.main-header-text-primary {
+  align-self: center;
+  margin-top: 76px;
+}
 
 .main-header-text-additional {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  line-height: 26px;
-
+  margin: 0;
+  margin-top: 58px;
+  padding: 0;
+  text-align: center;
 }
 
 .advantages-header-text {
+  display: block;
   line-height: 26px;
+  text-align: center;
+  margin-top: 29px;
+  margin-bottom: 54px;
+  padding: 0;
 }
+
 
 .advantages p {
   color: #333333;
@@ -71,38 +120,132 @@ a {
 .advantages h4 {
   font-size: 21px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.advantage-life-text,
-.advantage-life-text h3,
-.advantage-life-text p,
-.advantage-bridge-text,
-.advantage-bridge-text h3,
-.advantage-bridge-text p {
+.advantage-life,
+.advantage-bridge,
+.advantage-items {
+  text-align: center;
+}
+
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantage-item,
+.details-residence, 
+.details-food,
+.details-souvenirs,
+ {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.advantage-item h3 {
+  margin: 0;
+  margin-top: 48px;
+  width: 151px;
+}
+
+.advantage-item p:nth-of-type(1) {
+  margin: 0;
+  margin-top: 26px;
+}
+
+.advantage-item p:nth-of-type(2) {
+  margin-left: 49px;
+  margin-right: 49px;
+  margin-top: 22px;
+  margin-bottom: 62px;   
+}
+
+.advantage-text-and-photo {
+  display: flex;
+  align-items: center;
+  height: 256px;
+  overflow: hidden;
+
+}
+
+.advantage-text-and-photo h3,
+.advantage-text-and-photo p {
   color: #ffffff;
-  background-color: #81b3d1; 
+}
+
+.advantage-text-and-photo {
+  background-color: #81b3d1;
 }
 
 .advantage-life-details-list {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+.advantage-life-details-list h4 {
+  margin: 0;
+  margin-top: 162px;
+}
+
+.advantage-life-details-list p {
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 78px;
+  padding: 0 50px;
+}
+
+
 .advantage-items {
+  display: flex;
   background-color: #eeeeee;
 }
 
+.advantage-item-other:nth-child(1) p:nth-of-type(2),
+.advantage-item-other:nth-child(3) p:nth-of-type(2){
+  padding-left: 40px;
+  padding-right: 40px; 
+}
+
+.advantage-item-other:nth-child(2) p:nth-of-type(2){
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.hotel-search,
+.hotel-search-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .search-text1 {
+  margin: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
+  margin-top: 56px;
 }
 
 .search-text2 {
   line-height: 24px;
+  margin-top: 29px;
+  margin-bottom: 41px;
   color: #333333;
 }
 
@@ -114,8 +257,11 @@ a {
 .search-open-button {
   font-size: 21px;
   line-height: 26px;
+  width: 568px;
+  padding: 28px 0;
   color: #ffffff;
   background-color: #756357;
+  border: none;
 }
 
 .search-open-button:hover {
@@ -128,8 +274,13 @@ a {
 }
 
 .search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   font-weight: 700;
   line-height: 26px;
+  width: 458px;
+  padding: 55px 0;
 }
 
 .search-form input {
@@ -137,7 +288,9 @@ a {
   font-weight: inherit;
   line-height: inherit;
   text-transform: inherit;
+  height: 38px;
   background-color: #f1f1f1;
+  border: none;
 }
 
 .search-form input:hover {
@@ -148,9 +301,66 @@ a {
   background-color: #ffffff;
 }
 
+.search-item:nth-child(1),
+.search-item:nth-child(2)  {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+}
+
+.search-item:nth-child(1) label,
+.search-item:nth-child(2) label, {
+  padding: 0;
+  margin: 0;
+}
+
+.search-item:nth-child(1) input,
+.search-item:nth-child(2) input {
+    width: 346px;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+
+.search-item:nth-child(3)  {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.search-item:nth-child(3) input {
+    width: 38px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.search-item-count {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.search-item-count:nth-child(1) label {
+  margin-right: 40px;
+}
+
+.search-item-count:nth-child(2) label {
+  margin-right: 28px;
+}
+
 .button-count {
   color: #a9a9a9;
   background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  height: 38px;
+  width: 38px;
+  border: none;
 }
 
 .button-count:hover {
@@ -164,8 +374,11 @@ a {
 .search-send-button {
   font-size: 21px;
   line-height: 26px;
+  width: 458px;
+  padding: 17px 0;
   color: #ffffff;
   background-color: #81b3d1;
+  border: none;
 }
 
 .search-send-button:hover {
@@ -182,7 +395,8 @@ a {
   background-color: rgba(255,255,255,0.9);
 }
 
-.page-footer-hashtag {
+.page-footer-hashtag {    
+  margin: 0;
   font-size: 21px;
   font-weight: 700;
 }

@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="catalog-page">
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="page-header-nav">
         <a class="page-header-logo" href="index.html">
           <img src="img/logo.png" width="138" height="70" alt="Логотип «Седона»">
@@ -22,11 +22,11 @@
       </nav>  
     </header>
     <main class="container">
-      <h1>Поиск гостиницы в Седоне</h1>
+      <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
       <section class="search-filters">
         <h2 class="visually-hidden">Фильтры поиска гостиницы</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
+          <fieldset class="filter-fieldset-infrastructure">
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
@@ -43,7 +43,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-fieldset-type">
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter-option">
@@ -60,7 +60,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-fieldset-price">
             <legend>Стоимость в сутки (Р):</legend>
             <label for="filter-price-min">От 0</label>
             <label for="filter-price-max">До 3000</label>
@@ -68,36 +68,42 @@
               <input type="range" min="0" max="4000" step="10" name="price-min" value="0" id="filter-price-min">
               <input type="range" min="0" max="4000" step="10" name="price-max" value="3000" id="filter-price-max">
             </p>
-          </fieldset>
-          <button class="button search-button" type="submit">Показать</button>
+            <button class="button search-button" type="submit">Показать</button>
+          </fieldset>          
         </form>
       </section>
       <section class="search-result">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <div class="result-header">
           <p class="result-header-count">Найдено: 3</p>
-          <div class="result-header-sort">
-            <p>Сортировка:</p>
-            <ul class="sort-list">
-              <li class="sort-list-current"><a class="sort-price" href="#">По цене</a></li>
-              <li><a class="sort-type" href="#">По типу</a></li>
-              <li><a class="sort-rating" href="#">По рейтингу</a></li>
-            </ul>
-            <div class="sort-order">
-              <a class="sort-order-asc" href="#">По возрастанию</a>
-              <a class="sort-order-current sort-order-desc" href="#">По убыванию</a>
-            </div>
+          <p class="sort-list-label">Сортировка:</p>
+          <ul class="sort-list">
+            <li class="sort-list-current"><a class="sort-price" href="#">По цене</a></li>
+            <li><a class="sort-type" href="#">По типу</a></li>
+            <li><a class="sort-rating" href="#">По рейтингу</a></li>
+          </ul>
+          <div class="sort-order">
+            <a class="sort-order-asc" href="#">По возрастанию</a>
+            <a class="sort-order-current sort-order-desc" href="#">По убыванию</a>
           </div>
-        </div> 
+        </div>
         <ul class="result-list">
           <li class="result-item">
-            <img src="img/Amara.jpg" width="135" height="90" alt="Amara">
-            <a class="result-item-name" href="#">Amara resort &amp; spa</a>            
-            <p class="result-item-type">Гостиница</p>
-            <p class="result-item-price">От 4000 р.</p>
-            <a class="result-details" href="#">Подробнее</a>
-            <a class="result-booking" href="#">Забронировать</a>
-            <div class="result-item-rating">
+            <img class="result-photo" src="img/Amara.jpg" width="135" height="90" alt="Amara">
+            <div class="result-info">
+              <a class="result-name" href="#">Amara resort &amp; spa</a>
+              <div class="result-info-container">
+                <div class="result-info-col1">
+                  <p class="result-type">Гостиница</p>
+                  <a class="result-details" href="#">Подробнее</a>               
+                </div>
+                <div class="result-info-col2">
+                  <p class="result-price">От 4000 р.</p>
+                  <a class="result-booking" href="#">Забронировать</a>
+                </div>  
+              </div>
+            </div>  
+            <div class="result-rating">
               <div class="rating-stars">
                 <img src="img/star.svg" width="18" height="17" alt="Рейтинг 4 звезды">
                 <img src="img/star.svg" width="18" height="17" alt="">
@@ -108,13 +114,21 @@
             </div>
           </li>
           <li class="result-item">
-            <img src="img/desert-quail.jpg" width="135" height="90" alt="Desert Quail">
-            <a class="result-item-name" href="#">Desert Quail inn</a>          
-            <p class="result-item-type">Мотель</p>
-            <p class="result-item-price">От 3000 р.</p>
-            <a class="result-details" href="#">Подробнее</a>
-            <a class="result-booking" href="#">Забронировать</a>
-            <div class="result-item-rating">
+            <img class="result-photo" src="img/desert-quail.jpg" width="135" height="90" alt="Desert Quail">   
+            <div class="result-info">
+              <a class="result-name" href="#">Desert Quail inn</a>  
+              <div class="result-info-container">
+                <div class="result-info-col1">
+                  <p class="result-type">Мотель</p>
+                  <a class="result-details" href="#">Подробнее</a>
+                </div>
+                <div class="result-info-col2">                  
+                  <p class="result-price">От 3000 р.</p>
+                  <a class="result-booking" href="#">Забронировать</a>
+                </div>  
+               </div>  
+            </div>    
+            <div class="result-rating">
               <div class="rating-stars">
                 <img src="img/star.svg" width="18" height="17" alt="Рейтинг 3 звезды">
                 <img src="img/star.svg" width="18" height="17" alt="">
@@ -124,13 +138,21 @@
             </div>
           </li>
           <li class="result-item">
-            <img src="img/poco-diablo.jpg" width="135" height="90" alt="Poco Diablo">
-            <a class="result-item-name" href="#">Villas at Poco Diablo</a>
-            <p class="result-item-type">Апартаменты</p>
-            <p class="result-item-price">От 2000 р.</p>
-            <a class="result-details" href="#">Подробнее</a>
-            <a class="result-booking" href="#">Забронировать</a>
-            <div class="result-item-rating">
+            <img class="result-photo" src="img/poco-diablo.jpg" width="135" height="90" alt="Poco Diablo">
+            <div class="result-info">
+              <a class="result-name" href="#">Villas at Poco Diablo</a>
+              <div class="result-info-container">
+                <div class="result-info-col1">
+                  <p class="result-type">Апартаменты</p>
+                  <a class="result-details" href="#">Подробнее</a>                 
+                </div> 
+                <div class="result-info-col2">
+                  <p class="result-price">От 2000 р.</p>
+                  <a class="result-booking" href="#">Забронировать</a>
+                </div>
+              </div>  
+            </div>  
+            <div class="result-rating">
               <div class="rating-stars">
                 <img src="img/star.svg" width="18" height="17" alt="Рейтинг 2 звезды">
                 <img src="img/star.svg" width="18" height="17" alt="">
@@ -141,7 +163,7 @@
         </ul>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <p class="page-footer-hashtag"><b>#VISITSEDONA</b></p>
       <ul class="page-footer-social">
         <li><a class="social-link" href="#">Twitter</a></li>

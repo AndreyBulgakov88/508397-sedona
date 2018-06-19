@@ -391,25 +391,51 @@ a {
 }
 
 .page-footer {
+  display: flex;
+  align-items: center;
   line-height: 26px;
+  height: 120px;
   background-color: rgba(255,255,255,0.9);
 }
 
 .page-footer-hashtag {    
-  margin: 0;
+  margin-left: 132px;
+  margin-right: auto;
+  padding: 0;
   font-size: 21px;
   font-weight: 700;
 }
 
 .page-footer-social {
+    display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
   list-style: none;
 }
 
 .social-link {
+
   font-weight: 700;
   color: #000000;
 }
 
+.page-footer-copyright {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 101px;
+  margin-left: auto;
+  padding: 0;
+}
+
+.copyright-logo {
+  margin-top: 10px;
+}
+
+.page-footer-copyright p {
+  margin-right: 8px;
+}
 
 /*Страница каталога*/
 

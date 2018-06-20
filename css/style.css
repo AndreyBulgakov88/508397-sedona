@@ -28,7 +28,7 @@ body {
 .container-shadow {
     width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 5px 2px #dadada;
+  box-shadow: 0 0 9px 4px #dadada;
 }
 
 .container {

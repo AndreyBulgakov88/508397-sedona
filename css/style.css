@@ -1,9 +1,4 @@
 /*Основная страница и стили, общие для всех страниц*/
-html,
-body {
-  min-width: 1280px;
-}
-
 body {
   margin: 0;
   padding: 0;

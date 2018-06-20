@@ -25,6 +25,12 @@ body {
   margin: -1px;
 }
 
+.container-shadow {
+    width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 5px 2px #dadada;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -99,7 +105,7 @@ a {
   margin: 0;
   margin-top: 58px;
   padding: 0;
-  text-align: center;
+  text-align: center;   
 }
 
 .advantages-header-text {

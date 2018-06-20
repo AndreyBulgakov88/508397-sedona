@@ -21,7 +21,7 @@ body {
 }
 
 .container-shadow {
-    width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 9px 4px #dadada;
 }
@@ -45,9 +45,10 @@ a {
 
 .nav-menu {
   display: flex;
-  padding: 18px 72px;
-  list-style: none;
+  flex-wrap: wrap;
   margin: 0;
+  padding: 16px 72px;
+  list-style: none;
 }
 
 .nav-menu li:nth-child(1) {
@@ -59,7 +60,7 @@ a {
 }
 
 .nav-menu li:nth-child(3) {
-  margin-right: 162px;
+  margin-right: 165px;
 }
 
 .nav-menu a {
@@ -98,7 +99,7 @@ a {
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-  margin-top: 58px;
+  margin-top: 60px;
   padding: 0;
   text-align: center;   
 }
@@ -107,8 +108,8 @@ a {
   display: block;
   line-height: 26px;
   text-align: center;
-  margin-top: 29px;
-  margin-bottom: 54px;
+  margin-top: 28px;
+  margin-bottom: 49px;
   padding: 0;
 }
 
@@ -155,19 +156,19 @@ a {
 
 .advantage-item h3 {
   margin: 0;
-  margin-top: 48px;
+  margin-top: 51px;
   width: 151px;
 }
 
 .advantage-item p:nth-of-type(1) {
   margin: 0;
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 .advantage-item p:nth-of-type(2) {
   margin-left: 49px;
   margin-right: 49px;
-  margin-top: 22px;
+  margin-top: 21px;
   margin-bottom: 62px;   
 }
 
@@ -204,7 +205,7 @@ a {
 .advantage-life-details-list p {
   margin: 0;
   margin-top: 24px;
-  margin-bottom: 78px;
+  margin-bottom: 82px;
   padding: 0 50px;
 }
 

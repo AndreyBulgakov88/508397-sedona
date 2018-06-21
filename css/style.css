@@ -1,5 +1,6 @@
 /*Основная страница и стили, общие для всех страниц*/
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   
@@ -12,18 +13,28 @@ body {
   background-color: #f1f1f1;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container-shadow {
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 9px 4px #dadada;
+  box-shadow: 0 0 10px 5px #dadada;
 }
 
 .container {
@@ -36,18 +47,31 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .page-header-nav {
+  position: relative;
   font-weight: 700;
   line-height: 26px;
   color: #000000;
   background-color: #ffffff;
 }
 
+.page-header-logo {
+  position: absolute;
+  left: 531px;
+  z-index: 1;
+}
+
 .nav-menu {
+  
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 16px 72px;
+  padding: 14px 72px 16px 72px;
   list-style: none;
 }
 
@@ -82,11 +106,22 @@ a {
 }
 
 .main-header-background {
+  position: relative;
   display: flex;
   flex-direction: column;
-   background: url(../img/background-index.jpg) no-repeat 50% 21%, url(../img/background-index-bottom.png) no-repeat center center;
+   background: url(../img/background-index.jpg) no-repeat 50% 21%;
   width: 1200px;
   height: 508px;
+}
+
+.main-header-background::after {
+  content: "";
+  
+  position: absolute;
+  background: url(../img/background-index-bottom.png) no-repeat;
+  width: 1200px;
+  height: 57px;
+  bottom: 0;
 }
  
 .main-header-text-primary {
@@ -100,7 +135,7 @@ a {
   font-weight: 700;
   margin: 0;
   margin-top: 60px;
-  padding: 0;
+  padding: 0 300px;
   text-align: center;   
 }
 
@@ -108,8 +143,8 @@ a {
   display: block;
   line-height: 26px;
   text-align: center;
-  margin-top: 28px;
-  margin-bottom: 49px;
+  margin-top: 26px;
+  margin-bottom: 51px;
   padding: 0;
 }
 
@@ -134,7 +169,7 @@ a {
 
 .advantage-life,
 .advantage-bridge,
-.advantage-items {
+.advantage-items-other {
   text-align: center;
 }
 
@@ -156,7 +191,7 @@ a {
 
 .advantage-item h3 {
   margin: 0;
-  margin-top: 51px;
+  margin-top: 48px;
   width: 151px;
 }
 
@@ -169,7 +204,7 @@ a {
   margin-left: 49px;
   margin-right: 49px;
   margin-top: 21px;
-  margin-bottom: 62px;   
+  margin-bottom: 60px; 
 }
 
 .advantage-text-and-photo {
@@ -177,7 +212,7 @@ a {
   align-items: center;
   height: 256px;
   overflow: hidden;
-
+  background-color: #81b3d1;
 }
 
 .advantage-text-and-photo h3,
@@ -185,21 +220,23 @@ a {
   color: #ffffff;
 }
 
-.advantage-text-and-photo {
-  background-color: #81b3d1;
-}
-
-.advantage-life-details-list {
+.advantage-life-details-list, 
+.advantage-items-other {
   display: flex;
-  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.advantage-life-details-list li, 
+.advantage-items-other li {
+  width: 400px;
+}
+
 .advantage-life-details-list h4 {
   margin: 0;
   margin-top: 162px;
+  padding: 0;
 }
 
 .advantage-life-details-list p {
@@ -209,21 +246,32 @@ a {
   padding: 0 50px;
 }
 
-
-.advantage-items {
-  display: flex;
+.advantage-items-other {
   background-color: #eeeeee;
 }
 
-.advantage-item-other:nth-child(1) p:nth-of-type(2),
-.advantage-item-other:nth-child(3) p:nth-of-type(2){
+.advantage-item-other h3 {
+  margin-top: 47px;
+}
+
+.advantage-item-other p{
+ margin-bottom: 0; 
+}
+
+.advantage-item-other:nth-child(1) p:nth-of-type(2)
+{
   padding-left: 40px;
   padding-right: 40px; 
 }
 
 .advantage-item-other:nth-child(2) p:nth-of-type(2){
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.advantage-item-other:nth-child(3) p:nth-of-type(2) {
+  padding-left: 25px;
+  padding-right: 25px; 
 }
 
 .hotel-search,
@@ -241,13 +289,13 @@ a {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-  margin-top: 56px;
+  margin-top: 49px;
 }
 
 .search-text2 {
   line-height: 24px;
-  margin-top: 29px;
-  margin-bottom: 41px;
+  margin-top: 24px;
+  margin-bottom: 47px;
   color: #333333;
 }
 
@@ -260,7 +308,7 @@ a {
   font-size: 21px;
   line-height: 26px;
   width: 568px;
-  padding: 28px 0;
+  padding: 30px 0;
   color: #ffffff;
   background-color: #756357;
   border: none;
@@ -278,7 +326,6 @@ a {
 .search-form {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   font-weight: 700;
   line-height: 26px;
   width: 458px;
@@ -304,7 +351,8 @@ a {
 }
 
 .search-item:nth-child(1),
-.search-item:nth-child(2)  {
+.search-item:nth-child(2) {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -313,10 +361,8 @@ a {
   padding: 0;
 }
 
-.search-item:nth-child(1) label,
-.search-item:nth-child(2) label, {
-  padding: 0;
-  margin: 0;
+.search-item:nth-child(2) {
+  margin-bottom: 30px;
 }
 
 .search-item:nth-child(1) input,
@@ -324,6 +370,25 @@ a {
     width: 346px;
     padding-left: 13px;
     box-sizing: border-box;
+}
+
+.calendar {
+  position: absolute;
+  content: "";
+  right: 9px;
+  top: 8px;
+  width: 21px;
+  height: 22px;
+  opacity: 0.28;
+  background: url(../img/calendar.svg) no-repeat;
+}
+
+.calendar:hover {
+  opacity: 1;
+}
+
+.calendar:active {
+  fill: #81b3d1;
 }
 
 .search-item:nth-child(3)  {
@@ -352,14 +417,14 @@ a {
 }
 
 .search-item-count:nth-child(2) label {
-  margin-right: 28px;
+  margin-right: 26px;
 }
 
 .button-count {
+  align-self: center;
   color: #a9a9a9;
+  font-size: 24px;
   background-color: #f1f1f1;
-  margin: 0;
-  padding: 0;
   height: 38px;
   width: 38px;
   border: none;
@@ -377,7 +442,7 @@ a {
   font-size: 21px;
   line-height: 26px;
   width: 458px;
-  padding: 17px 0;
+  padding: 16px 0;
   color: #ffffff;
   background-color: #81b3d1;
   border: none;

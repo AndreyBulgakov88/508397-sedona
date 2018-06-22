@@ -312,12 +312,23 @@ img {
 
 .hotel-search,
 .hotel-search-header {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.hotel-search {
+  margin-bottom: 78px;
+}
+
+.hotel-search-header {
+  z-index: 3;
+  background-color: #ffffff;
+  width: 1200px;
 }
 
 .search-text1 {
@@ -364,8 +375,9 @@ img {
   flex-direction: column;
   font-weight: 700;
   line-height: 26px;
-  width: 458px;
-  padding: 55px 0;
+  padding: 55px 55px;
+  z-index: 3;
+  background-color: #ffffff;
 }
 
 .search-form input {
@@ -410,13 +422,11 @@ img {
 
 .calendar {
   position: absolute;
-  content: "";
   right: 9px;
   top: 8px;
   width: 21px;
   height: 22px;
   opacity: 0.28;
-  background: url(../img/calendar.svg) no-repeat;
 }
 
 .calendar:hover {
@@ -486,6 +496,7 @@ img {
 
 .search-send-button:hover {
   background-color: #669dc0;
+
 }
 
 .search-send-button:active {
@@ -493,11 +504,18 @@ img {
   background-color: #5495bd;
 }
 
+.search-map {
+  position: absolute;
+  top: 183px;
+}
+
 .page-footer {
+  position: relative;
   display: flex;
   align-items: center;
   line-height: 26px;
-  height: 120px;
+  padding-top: 22px;
+  padding-bottom: 27px;
   background-color: rgba(255,255,255,0.9);
 }
 
@@ -507,20 +525,39 @@ img {
   padding: 0;
   font-size: 21px;
   font-weight: 700;
+  
 }
 
 .page-footer-social {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  padding-left: 35px;
   list-style: none;
 }
 
 .social-link {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;  
   font-weight: 700;
   color: #000000;
+  margin-right: 6px;
+  background-color: #81b3d1;
+}
+
+.social-link:hover {
+  background-color: #669dc0;
+}
+
+.social-link:active path {
+  fill: #88b5d1;
+  background-color: #5495bd;
 }
 
 .page-footer-copyright {
@@ -533,7 +570,16 @@ img {
 }
 
 .copyright-logo {
-  margin-top: 10px;
+  width: 115px;
+  height: 41px;  
+}
+
+.copyright-logo:hover path{
+  fill: #81b3d1;
+}
+
+.copyright-logo:active path{
+  fill: #bdbbbb;
 }
 
 .page-footer-copyright p {

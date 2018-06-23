@@ -41,7 +41,6 @@ input[type="radio"].visually-hidden {
 
 .container {
   width: 1200px;
-  margin: 0 auto;
   
   background-color: #ffffff;
 }
@@ -60,9 +59,6 @@ img {
   
   font-weight: 700;
   line-height: 26px;
-  
-  color: #000000;
-  background-color: #ffffff;
 }
 
 .page-header-logo {
@@ -159,9 +155,7 @@ img {
   
   margin-top: 26px;
   margin-bottom: 51px;
-  padding: 0;
 }
-
 
 .advantages p {
   color: #333333;
@@ -170,10 +164,6 @@ img {
 .advantages h3,
 .advantages h4 {
   font-size: 21px;
-  line-height: 21px;
-  
-  margin: 0;
-  padding: 0;
 }
 
 .advantages-list {
@@ -200,8 +190,6 @@ img {
 .details-food,
 .details-souvenirs  {
   width: 400px;
-  margin: 0;
-  padding: 0;
 }
 
 .advantage-life-details-list li {
@@ -212,7 +200,6 @@ img {
 .advantage-items-other {
   display: flex;
 
-  margin: 0;
   padding: 0;
   
   list-style: none;
@@ -226,11 +213,9 @@ img {
 .advantage-life-details-list h4 {
   margin: 0;
   margin-top: 162px;
-  padding: 0;
 }
 
 .advantage-life-details-list p {
-  margin: 0;
   margin-top: 24px;
   margin-bottom: 82px;
   padding: 0 50px;
@@ -317,10 +302,6 @@ img {
   margin-top: 47px;
 }
 
-.advantage-item-other p{
- margin-bottom: 0; 
-}
-
 .advantage-item-other:nth-child(1) p:nth-of-type(2)
 {
   padding-left: 40px;
@@ -346,9 +327,6 @@ img {
   position: relative;
   
   text-align: center;
-  
-  margin: 0;
-  padding: 0;
 }
 
 .hotel-search {
@@ -424,7 +402,6 @@ img {
 .search-form input {
   font-size: inherit;
   font-weight: inherit;
-  line-height: inherit;
   text-transform: inherit;
   
   height: 38px;
@@ -451,7 +428,6 @@ img {
   
   margin: 0;
   margin-bottom: 29px;
-  padding: 0;
 }
 
 .search-item:nth-child(2) {
@@ -498,7 +474,6 @@ img {
   text-align: center;
   
   width: 38px;
-  margin: 0;
   padding: 0;
 }
 
@@ -582,8 +557,7 @@ img {
   font-weight: 700;
   
   margin-left: 132px;
-  margin-right: auto;
-  padding: 0;  
+  margin-right: auto; 
 }
 
 .page-footer-social {
@@ -593,7 +567,6 @@ img {
   
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
   padding-left: 35px;
   
   list-style: none;
@@ -627,10 +600,8 @@ img {
   display: flex;
   align-items: center;
   
-  margin: 0;
   margin-right: 101px;
   margin-left: auto;
-  padding: 0;
 }
 
 .copyright-logo {

@@ -302,13 +302,12 @@ img {
   margin-top: 47px;
 }
 
-.advantage-item-other:nth-child(1) p:nth-of-type(2)
-{
+.advantage-item-other:nth-child(1) p:nth-of-type(2) {
   padding-left: 40px;
   padding-right: 40px; 
 }
 
-.advantage-item-other:nth-child(2) p:nth-of-type(2){
+.advantage-item-other:nth-child(2) p:nth-of-type(2) {
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -318,13 +317,10 @@ img {
   padding-right: 25px; 
 }
 
-.hotel-search,
 .hotel-search-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  position: relative;
   
   text-align: center;
 }
@@ -359,6 +355,14 @@ img {
   color: #333333;
 }
 
+.search-form-and-map {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+  margin-bottom: 473px;
+}
+
 .button {
   text-transform: uppercase;
   font-weight: 700;
@@ -389,6 +393,8 @@ img {
   display: flex;
   flex-direction: column;
   
+  position: absolute;
+  top: 86px;
   z-index: 3;
   
   font-weight: 700;
@@ -408,6 +414,7 @@ img {
   
   background-color: #f1f1f1;
   border: none;
+  outline: none;
 }
 
 .search-form input:hover {
@@ -415,6 +422,7 @@ img {
 }
 
 .search-form input:focus {
+  border: 2px solid #e5e5e5;
   background-color: #ffffff;
 }
 
@@ -438,7 +446,9 @@ img {
 .search-item:nth-child(2) input {
   width: 346px;
   padding-left: 13px;
-  
+}
+
+.search-item input {
   box-sizing: border-box;
 }
 
@@ -446,14 +456,18 @@ img {
   position: absolute;
   right: 9px;
   top: 8px;
+
+  padding: 0;
+  margin: 0;
   
-  width: 21px;
-  height: 22px;
-  
-  opacity: 0.28;
+  opacity: 0.3;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
-.calendar:hover {
+.calendar:hover,
+.calendar:focus {
   opacity: 1;
 }
 
@@ -461,7 +475,7 @@ img {
   fill: #81b3d1;
 }
 
-.search-item:nth-child(3)  {
+.search-item:nth-child(3) {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -502,6 +516,7 @@ img {
   color: #a9a9a9;
   background-color: #f1f1f1;
   border: none;
+  outline-color: #b5b5b5;
 }
 
 .button-count:hover {
@@ -509,7 +524,7 @@ img {
 }
 
 .button-count:active {
-  color: #81b3d2
+  color: #81b3d2; 
 }
 
 .search-send-button {
@@ -536,11 +551,11 @@ img {
 
 .search-map {
   position: absolute;
-  top: 183px;
+  z-index: -1;
+  top: -21px;
 }
 
 .page-footer {
-  position: relative;
   display: flex;
   align-items: center;
   
@@ -920,8 +935,6 @@ img {
   line-height: 16px;
   
   color: #000000;
-  
-  outline: none;
 }
 
 .result-name:hover {

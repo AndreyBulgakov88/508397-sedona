@@ -175,7 +175,7 @@ img {
 
 .advantage-life,
 .advantage-bridge,
-.advantage-items-other {
+.advantage-list-other {
   text-align: center;
 }
 
@@ -197,16 +197,17 @@ img {
 }
 
 .advantage-life-details-list, 
-.advantage-items-other {
+.advantage-list-other {
   display: flex;
 
+  margin: 0;
   padding: 0;
   
   list-style: none;
 }
 
 .advantage-life-details-list li, 
-.advantage-items-other li {
+.advantage-list-other li {
   width: 400px;
 }
 
@@ -294,7 +295,7 @@ img {
   color: #ffffff;
 }
 
-.advantage-items-other {
+.advantage-list-other {
   background-color: #eeeeee;
 }
 

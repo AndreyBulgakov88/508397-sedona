@@ -642,7 +642,7 @@ img {
   background: url(../img/background-catalog.jpg) no-repeat;
 }
 
-.nav-menu-current a {
+.nav-menu-current a:not([href]) {
   color: #766357;
 }
 
@@ -652,8 +652,8 @@ img {
   width: 1200px;
   margin: 0;
   padding: 0;
-  padding-top: 28px;
-  padding-bottom: 20px;
+  padding-top: 27px;
+  padding-bottom: 17px;
   
   color: #ffffff;
 }
@@ -665,48 +665,76 @@ img {
 
 .filter-fieldset-infrastructure {
   margin: 0;
-  margin-left: 72px;
-  margin-right: 115px;
+  margin-left: 71px;
+  margin-right: 119px;
   padding: 0;
-  padding-top: 12px;
+  padding-top: 14px;
   
   border: none;
 }
 
 .filter-fieldset-type {
   margin: 0;
-  margin-right: 347px;
+  margin-right: 349px;
   padding: 0;
-  padding-top: 12px;
+  padding-top: 14px;
   
   border: none;
 }
 
 .filter-option {
+  position: relative;
   padding-top: 11px;
-  padding-bottom: 11px;
+  padding-bottom: 14px;
 }
 
 .filter-fieldset-infrastructure ul,
 .filter-fieldset-type ul {
   margin: 0;
-  padding: 0;
-
-  border: none;
   
   list-style: none;
 }
 
+.filter-checkbox + label::before {
+  content: "";
+  
+  position: absolute;
+  left: -39px;
+  top: 10px;
+  
+  width: 23px;
+  height: 23px;
+  
+  background: url("../img/checkbox-off.svg");
+  outline-color: black;
+}
+
+.filter-checkbox:disabled + label::before, 
+.filter-checkbox:disabled + label {
+ opacity: 0.5; 
+}
+
+.filter-checkbox:checked + label::before {
+  width: 27px;
+  height: 23px;
+  
+  background: url("../img/checkbox-on.svg");
+}
+
+.filter-checkbox:focus + label {
+  outline-width: thin;
+  outline-style: solid;
+}
+
 .filter-range {
-  width: 330px;
-  margin: 50px auto; /* для демо */
+  width: 318px;
 
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 
   font-weight: 600;
   font-size: 16px;
@@ -716,11 +744,10 @@ img {
 .price-controls {
   position: relative;
   
-  height: 36px;
+  height: 32px;
   margin-bottom: 20px;
 
   font-size: 0;
-
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -742,7 +769,7 @@ img {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
+  line-height: 31px;
   vertical-align: top;
 
   cursor: pointer;
@@ -750,8 +777,8 @@ img {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+  width: 83px;
+  padding-left: 64px;
 }
 
 .price-controls input {
@@ -765,9 +792,16 @@ img {
   border: none;
 }
 
+.price-controls input:focus {
+  outline-style: groove;
+  outline-color: #ffffff;
+  outline-width: thin;
+}
+
 .range-controls {
   position: relative;
 
+  margin-left: 1px;
   margin-bottom: 32px;
 }
 
@@ -799,21 +833,22 @@ img {
 }
 
 .range-toggle:hover {
+  transform: scale(1.1);
   background: #1c4f80;
 }
 
 .range-toggle-min {
-  left: 0;
+  left: 31;
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 34px;
 
   font-size: 14px;
   line-height: 20px;
@@ -836,10 +871,10 @@ img {
   display: flex;
   align-items: baseline;  
   
-  padding-top: 31px;
-  padding-bottom: 33px;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 71px;
+  padding-right: 73px;
 }
 
 .result-header-count {
@@ -857,7 +892,7 @@ img {
   
   margin: 0;
   padding: 0;
-  margin-left: 49px;
+  margin-left: 48px;
   margin-right: 40px;
 }
 
@@ -874,11 +909,16 @@ img {
 
 .sort-list a {
   margin-right: 33px;
+  
   color: rgba(0,0,0,0.3); 
+  border-bottom: 1px dotted #81b3d1;
 } 
 
-.sort-list-current a {
+.sort-list-current a:not([href]),
+.sort-list-current a:not([href]):active
+{
   color: #81b3d2;
+  border: none;
 }
 
 .sort-list a:hover {
@@ -887,16 +927,42 @@ img {
 
 .sort-list a:active {
   color: #000000; 
+  border: none;
 } 
 
 .sort-order {
   margin: 0;
   padding: 0;
+  
   margin-left: auto;
 }
 
-.sort-order a {
+.sort-order-desc {
+  margin-left: 8px;
+}
+
+.sort-order-button {
   color: #000000;
+}
+
+.sort-order-button path {
+  fill: #c9c9c9;
+}
+
+.sort-order-current path {
+  fill: #81b3d1;
+}
+
+.sort-order-button:hover path {
+  fill: #000000;
+}
+
+.sort-order-button:hover:not([href]) path {
+  fill: #81b3d1;
+}
+
+.sort-order-button:active path {
+  fill: #81b3d1;
 }
 
 .result-list {
@@ -907,15 +973,17 @@ img {
   margin: 0;
   
   list-style: none;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .result-item {
   display: flex;
   
-  margin-left: 72px;
   padding: 0;
   padding-top: 30px;
-  padding-bottom: 30px;   
+  padding-bottom: 30px; 
+  padding-left: 72px;
+  border-top: 1px solid #e5e5e5;
 }
 
 .result-photo {
@@ -962,15 +1030,16 @@ img {
 .result-type,
 .result-price {
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .result-details {
   font-weight: 700;
   
-  margin-right: 7px;
-  padding: 4px 17px;
+  margin-top: 2px;
+  margin-right: 6px;
+  padding: 3px 16px;
   
   color: #ffffff;
   background-color: #81b3d2;
@@ -988,7 +1057,8 @@ img {
 .result-booking {
   font-weight: 700;
   
-  padding: 4px 17px;
+  margin-top: 2px;
+  padding: 3px 17px;
   
   color: #ffffff;
   background-color: #756357;
@@ -1017,11 +1087,15 @@ img {
 .result-rating p {
   margin: 0;
   margin-top: 39px; 
-  padding-top: 4px;
+  padding-top: 3px;
   padding-bottom: 3px;
-  padding-left: 16px;
+  padding-left: 15px;
   padding-right: 13px;
   
   color: #666666;
   background-color: #f1f1f1;
+}
+
+.rating-stars img{
+  margin-left: 2px;
 }

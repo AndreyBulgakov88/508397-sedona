@@ -59,6 +59,7 @@ img {
   
   font-weight: 700;
   line-height: 26px;
+  z-index: 2;
 }
 
 .page-header-logo {
@@ -70,24 +71,27 @@ img {
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   
   margin: 0;
-  padding: 14px 72px 16px 72px;
+  padding: 14px 67px 16px 67px;
   
   list-style: none;
 }
 
+.nav-menu li {
+  padding: 0px 5px;
+}
+
 .nav-menu li:nth-child(1) {
-  margin-right: 147px;
+  margin-right: 136px;
 }
 
 .nav-menu li:nth-child(2) {
-  margin-right: 388px;
+  margin-right: auto;
 }
 
 .nav-menu li:nth-child(3) {
-  margin-right: 165px;
+  margin-right: 156px;
 }
 
 .nav-menu a {
@@ -873,6 +877,8 @@ img {
   display: flex;
   align-items: baseline;  
   
+  position: relative;
+  
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 71px;
@@ -900,6 +906,7 @@ img {
 
 .sort-list {
   display: flex;
+  flex-wrap: wrap;
   
   list-style: none;
   font-size: 12px;
@@ -933,10 +940,10 @@ img {
 } 
 
 .sort-order {
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  top: 35px;
+  right: 73px;
   
-  margin-left: auto;
 }
 
 .sort-order-desc {
@@ -989,8 +996,11 @@ img {
 }
 
 .result-photo {
+  align-self: center;
+  
+  width: 135px; 
+  height: 90px;
   margin-right: 30px;
-
 }
 
 .result-info {

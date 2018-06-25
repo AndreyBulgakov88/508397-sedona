@@ -70,28 +70,22 @@ img {
 
 .nav-menu {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  
+
   margin: 0;
-  padding: 14px 67px 16px 67px;
+  padding: 14px 72px 16px 72px;
   
   list-style: none;
 }
 
-.nav-menu li {
-  padding: 0px 5px;
+.nav-menu-item{
+  width: 264px;
 }
 
-.nav-menu li:nth-child(1) {
-  margin-right: 136px;
-}
-
-.nav-menu li:nth-child(2) {
-  margin-right: auto;
-}
-
-.nav-menu li:nth-child(3) {
-  margin-right: 156px;
+.nav-menu-item:nth-child(3),
+.nav-menu-item:nth-child(4) {  
+  text-align: right;
 }
 
 .nav-menu a {
@@ -569,7 +563,7 @@ img {
 .page-footer {
   display: flex;
   align-items: center;
-  
+   
   line-height: 26px;
   
   padding-top: 22px;

@@ -70,6 +70,7 @@ img {
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   
   margin: 0;
   padding: 14px 72px 16px 72px;
@@ -1001,7 +1002,9 @@ img {
 .result-name {
   font-size: 21px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 26px;
+  
+  margin-top: -5px;
   
   color: #000000;
 }
@@ -1021,22 +1024,26 @@ img {
 .result-info-col1 {
   display: flex;
   flex-direction: column;
+  max-width: 200px;
 }
 
 .result-info-col2 {
   display: flex;
   flex-direction: column;
+  max-width: 200px;
 }
 
 .result-type,
 .result-price {
   margin: 0;
-  padding-top: 12px;
+  margin-right: 6px;
+  padding-top: 7px;
   padding-bottom: 12px;
 }
 
 .result-details {
   font-weight: 700;
+  text-align: center;
   
   margin-top: 2px;
   margin-right: 6px;
@@ -1057,7 +1064,7 @@ img {
 
 .result-booking {
   font-weight: 700;
-  
+  text-align: center;
   margin-top: 2px;
   padding: 3px 17px;
   

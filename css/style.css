@@ -121,6 +121,7 @@ img {
   height: 508px;
   
   background: url(../img/background-index.jpg) no-repeat 50% 21%;
+  background-color: #f1f1f1;
 }
 
 .main-header-background::after {
@@ -160,6 +161,7 @@ img {
   
   margin-top: 26px;
   margin-bottom: 51px;
+  padding: 0px 300px;
 }
 
 .advantages p {
@@ -204,7 +206,8 @@ img {
 .advantage-life-details-list, 
 .advantage-list-other {
   display: flex;
-
+  flex-wrap: wrap;
+  
   margin: 0;
   padding: 0;
   
@@ -300,7 +303,7 @@ img {
   color: #ffffff;
 }
 
-.advantage-list-other {
+.advantage-list-other {  
   background-color: #eeeeee;
 }
 
@@ -350,6 +353,7 @@ img {
   
   margin: 0;
   margin-top: 49px;
+  padding: 0 300px;
 }
 
 .search-text2 {
@@ -357,6 +361,7 @@ img {
   
   margin-top: 24px;
   margin-bottom: 47px;
+  padding: 0 300px;
   
   color: #333333;
 }

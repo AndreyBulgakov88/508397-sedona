@@ -382,7 +382,8 @@ img {
   line-height: 26px;
   text-align: center;
   
-
+  position: relative;
+  z-index: 7;
   
   width: 568px;
   padding: 30px 0;
@@ -406,7 +407,7 @@ img {
   
   position: absolute;
   top: 86px;
-  z-index: 3;
+  z-index: 2;
   
   font-weight: 700;
   line-height: 26px;

@@ -9,8 +9,8 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-  storageAdultsCount = localStorage.getItem("adultsCount");
-  storageChildrenCount = localStorage.getItem("childrenCount");
+  storageAdultsCount = Number(localStorage.getItem("adultsCount"));
+  storageChildrenCount = Number(localStorage.getItem("childrenCount"));
 } catch (err) {
   isStorageSupport = false;
 }

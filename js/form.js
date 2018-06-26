@@ -21,8 +21,8 @@ openButton.addEventListener("click", function(event) {
   searchForm.classList.remove("search-form-error");
   arrivalDate.focus();
   if (isStorageSupport) {
-    adultsCount.value = localStorage.getItem("adultsCount");
-    childrenCount.value = localStorage.getItem("childrenCount");
+    adultsCount.value = storageAdultsCount;
+    childrenCount.value = storageChildrenCount;
   }
 });
 
